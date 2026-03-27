@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Toast Notification</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>Toast Notification</h1>
+      <p>Demo hệ thống thông báo</p>
+
+      <div class="card">
+        <button class="success" onclick="createToast('success')">
+          Success
+        </button>
+        <button class="error" onclick="createToast('error')">Error</button>
+        <button class="info" onclick="createToast('info')">Info</button>
+        <button class="warning" onclick="createToast('warning')">
+          Warning
+        </button>
+      </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

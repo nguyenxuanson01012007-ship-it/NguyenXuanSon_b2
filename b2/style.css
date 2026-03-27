@@ -1,0 +1,142 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* APP */
+.app {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+/* CARD */
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 16px;
+  justify-content: center;
+
+  padding: 20px;
+  border-radius: 16px;
+
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+/* BUTTON */
+.card button {
+  width: 140px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.card button:hover {
+  transform: scale(1.05);
+}
+
+/* MÀU THEO CHỨC NĂNG */
+.card button.success { background: #16a34a; }
+.card button.error { background: #dc2626; }
+.card button.info { background: #2563eb; }
+.card button.warning { background: #d97706; }
+
+/* TOAST CONTAINER */
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 320px;
+}
+
+/* TOAST */
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px;
+  margin-bottom: 10px;
+
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+
+  border-left: 5px solid;
+  position: relative;
+  overflow: hidden;
+
+  animation: slideIn 0.4s ease forwards;
+}
+
+/* TYPE */
+.toast.success { border-color: #16a34a; }
+.toast.error { border-color: #dc2626; }
+.toast.info { border-color: #2563eb; }
+.toast.warning { border-color: #d97706; }
+
+/* CLOSE */
+.toast .close {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+/* PROGRESS */
+.toast .progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: white;
+}
+
+/* ANIMATION */
+@keyframes slideIn {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  to {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+}
+
+@keyframes progress {
+  from { width: 100%; }
+  to { width: 0%; }
+}
