@@ -46,9 +46,7 @@ function showNext() {
     }, 400);
   };
 
-  // auto remove
   setTimeout(removeToast, 4000);
 
-  // click close
   toast.querySelector(".close").onclick = removeToast;
 }
